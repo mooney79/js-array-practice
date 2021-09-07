@@ -25,7 +25,14 @@ function replicate(str, num) {
 
 // Put your answer below -------------------------
 
+function reverseArr(arr) {
+  newArr = [...arr];
+  return newArr.reverse();
+}
 
+let testArr = [5, 3, 1];
+console.log(reverseArr(testArr));
+console.log(testArr);
 
 
 
