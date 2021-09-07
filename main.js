@@ -30,10 +30,6 @@ function reverseArr(arr) {
   return newArr.reverse();
 }
 
-let testArr = [5, 3, 1];
-console.log(reverseArr(testArr));
-console.log(testArr);
-
 
 
 
@@ -49,11 +45,14 @@ console.log(testArr);
 
 // Put your answer below -------------------------
 
-
-
-
-
-
+function removeFalsies(arr) {
+  for (i=0; i < arr.length; i++) {
+      if (arr[i] == false) {
+        arr.splice(i, i+1);
+      }
+  }
+  return arr;
+}
 
 
 
