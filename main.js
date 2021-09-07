@@ -188,19 +188,29 @@ console.log(flattenArray([0, 1, 2, [[[3, 4]]]]));
 
 // Put your answer below -------------------------
 
+
 function splitArray(arr, num) {
-
+    let count = 0;
+    for (i=0; i < arr.length; i = i+num) {
+        let arr2 = [...arr].splice(i, i+num);
+        arr[count] = arr2;
+        count++;
+    }
+    let remainder = (arr.length - Math.floor(arr.length/count));
+    for (j = 0; j < remainder; j++){
+        arr.pop();
+    }
+    return arr;
 }
+console.log(splitArray([1, 2, 3, 4], 2)); 
+console.log(splitArray([1, 2, 3, 4, 5], 3));
 
+/*
+These two fail in apparently different ways:
 
-//([1, 2, 3, 4], 2) should return [[1, 2], [3, 4]]
-// ([1, 2, 3, 4, 5], 3) should return [[1, 2, 3], [4, 5]]
-
-
-
-
-
-
+console.log(splitArray([1,2,3,4,5,6], 2));
+console.log(splitArray([1,2,3,4,5,6], 3));
+*/
 
 
 // -----------------------------------------------
