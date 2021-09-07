@@ -112,12 +112,24 @@ const uniqueNumbers = [...new Set(numbers)];
 
 // Put your answer below -------------------------
 
-
-
-
-
-
-
+function compareArrays(arr1, arr2) {
+  if (arr1.length === arr2.length) {
+    for (i=0; i < arr1.length; i++){
+        if (arr2.includes(arr1[i])) {
+            //keep iterating
+        } else {
+            return false;
+        }
+    }
+  } else {
+      return false;
+  }
+  return true;
+}
+// console.log(compareArrays([1,2,3,4], [1,2,3,4]));
+// console.log(compareArrays([1,2,3,4], [1,5,3,4]));
+// console.log(compareArrays([1,2,3,4], [4,3,2,1]));
+// console.log(compareArrays([1,2,3,4], [1,5,3,4,2]));
 
 
 
