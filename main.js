@@ -67,10 +67,14 @@ function removeFalsies(arr) {
 
 // Put your answer below -------------------------
 
+// const myArray = [['name', 'Charlie'], ['color', 'brown'], ['age', 10]];
 
+function arrsToObjs(arr) {
+    myObj = Object.fromEntries(arr);
+    return myObj;
+};
 
-
-
+// console.log(arrsToObjs(myArray));
 
 
 
@@ -86,7 +90,9 @@ function removeFalsies(arr) {
 // Put your answer below -------------------------
 
 
-
+//const numbers = [1, 2, 3, 4, 5, 4, 3];
+const uniqueNumbers = [...new Set(numbers)];
+//console.log(uniqueNumbers)
 
 
 
