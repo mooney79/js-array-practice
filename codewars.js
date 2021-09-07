@@ -74,3 +74,12 @@ function getAverage(marks){
 // THE SOUL OF WIT: REVERSE AN ARRAY
 // https://www.codewars.com/kata/59b81886460387d8fc000043
 //Don't get too caught up on character limit
+
+
+reverse = a => {b = [];
+    for (i = 0; i < a.length; i++) {
+      b.unshift(a[i]);
+    } return b;
+    };
+
+    //shortest I could get it
