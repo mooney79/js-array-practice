@@ -24,6 +24,15 @@ var number=function(array){
 // https://www.codewars.com/kata/571d42206414b103dc0006a1/train/javascript
 
 
+function arr (N) {  
+    if (N !== []) {
+      let returnArray = [];
+      for (i=0; i < N; i++){
+        returnArray.push(i); 
+      }
+    return returnArray;
+    }  
+  }  
 
 
 // # 3
@@ -31,6 +40,19 @@ var number=function(array){
 // https://www.codewars.com/kata/58356a94f8358058f30004b5/train/javascript
 
 
+function flyBy(lamps, drone){
+    let distance = 0;
+    if ( drone.length >= lamps.length ) {
+      distance = lamps.length;
+    } else {
+      distance = drone.length;
+    }
+    let returnArray = lamps.split('');
+    for (i=0; i < distance; i++) {
+      returnArray[i] = 'o';
+    }
+    return returnArray.join('');
+  }
 
 
 // # 4
