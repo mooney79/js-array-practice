@@ -1,8 +1,22 @@
+/*
+Complete on Codewars, then copy code here
+*/
+
 // # 1
 // Testing 1-2-3
 // https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/javascript
 
-
+var number=function(array){
+    for (i = 0; i < array.length; i++) {
+      if (array === []) {
+        //Do nothing
+      } else {
+        array[i] = `${i+1}: ${array[i]}`;
+      }
+    }
+    return array;
+  };
+  
 
 
 // # 2
@@ -29,3 +43,4 @@
 // #5
 // THE SOUL OF WIT: REVERSE AN ARRAY
 // https://www.codewars.com/kata/59b81886460387d8fc000043
+//Don't get too caught up on character limit
