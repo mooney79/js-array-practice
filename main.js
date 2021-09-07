@@ -154,11 +154,26 @@ function compareArrays(arr1, arr2) {
 
 // Put your answer below -------------------------
 
+newArr = [];
+function flattenArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            newArr = [...arr[i]];
+            for (j=0; j < newArr.length; j++) {
+                arr.splice(i+j, 1, newArr[j]);
+            }
+            let count = 0;
+            if ((Array.isArray(arr[i]) && (count < 10))) {
+                flattenArray(arr);
+                count++;
+            }
+        }
+    }
+    return arr;
+}
 
-
-
-
-
+console.log(flattenArray([0, 1, 2, [3, 4]]));
+console.log(flattenArray([0, 1, 2, [[[3, 4]]]]));
 
 
 
@@ -173,7 +188,13 @@ function compareArrays(arr1, arr2) {
 
 // Put your answer below -------------------------
 
+function splitArray(arr, num) {
 
+}
+
+
+//([1, 2, 3, 4], 2) should return [[1, 2], [3, 4]]
+// ([1, 2, 3, 4, 5], 3) should return [[1, 2, 3], [4, 5]]
 
 
 
