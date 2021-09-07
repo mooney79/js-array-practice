@@ -5,11 +5,13 @@
 
 // Put your answer below -------------------------
 
-
-
-
-
-
+function replicate(str, num) {
+    stringArray=[];
+    for (i = 0; i < num; i++) {
+        stringArray.push(str);
+    }
+    return stringArray;
+}
 
 
 
