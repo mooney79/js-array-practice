@@ -196,7 +196,7 @@ function splitArray(arr, num) {
         arr[count] = arr2;
         count++;
     }
-    let remainder = (arr.length - Math.floor(arr.length/count));
+    let remainder = arr.length - count;
     for (j = 0; j < remainder; j++){
         arr.pop();
     }
@@ -204,12 +204,12 @@ function splitArray(arr, num) {
 }
 console.log(splitArray([1, 2, 3, 4], 2)); 
 console.log(splitArray([1, 2, 3, 4, 5], 3));
+console.log(splitArray([1,2,3,4,5,6], 3));
 
 /*
-These two fail in apparently different ways:
+This one fails
 
-console.log(splitArray([1,2,3,4,5,6], 2));
-console.log(splitArray([1,2,3,4,5,6], 3));
+console.log(splitArray([1,2,3,4,5,6], 2)); //OK, here arr2 is growing instead of being reset on the third pass
 */
 
 
